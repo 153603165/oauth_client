@@ -1,0 +1,17 @@
+server:
+    port: 8082
+    session:
+      cookie:
+        name: UISESSION
+security:
+  oauth2:
+    client:
+      clientId: acme
+      clientSecret: acmesecret
+      accessTokenUri: http://localhost:9090/oauth/token
+      userAuthorizationUri: http://localhost:9090/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:9090/oauth/user
+spring:
+  thymeleaf:
+    cache: false
